@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+    height: 100vh;  
+}
+
+.container{
+    display: grid;
+    grid-template-columns: fr fr fr fr;
+    grid-template-rows: fr fr;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 1150px;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
+}
+
+.card-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.card-1{
+    height: 100%;
+    min-width: 100px;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    background-color: var(--Moderate-violet);
+    border-radius: 10px;
+    grid-area: card1;
+
+}
+.card-2{
+    height: 100%;
+    min-width: 100px;
+    background-color: var(--Very-dark-grayish-blue);
+    border-radius: 10px;
+    grid-area: card2;
+    
+
+}
+.card-3{
+    height: 100%;
+    min-width: 100px;
+    background-color: var(--White);
+    border-radius: 10px;
+    grid-area: card3;
+    
+
+}
+.card-4{
+    height: 100%;
+    min-width: 100px;
+    background-color: var(--Very-dark-blackish-blue);
+    border-radius: 10px;
+    grid-area: card4;
+    
+
+}
+.card-5{
+    height: 100%;
+    min-width: 100px;
+    background-color: var(--White);
+    border-radius: 10px;
+    grid-area: card5;
+   
+
+}
+h1{
+    color: var(--White);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.card-3 h1 , .card-5 h1{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.name{
+    font-weight: 600px;
+    font-size: 15px;
+    color:var(--White) ;
+}
+
+.card-3 .name , .card-5 .name{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card-3 .title, .card-5 .title{
+    color: var(--Very-dark-grayish-blue);
+    opacity: 50%;
+}
+
+.title{
+    color: var(--White);
+    opacity: 50%;
+}
+
+.card-info{
+    color: var(--White);
+    opacity: 70%;
+    line-height: 1.5;
+}
+
+.card-3 .card-info , .card-5 .card-info{
+    color: var(--Very-dark-grayish-blue);
+    opacity: 70%;
+}
+
+.card-head img{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+@media (max-width:550px){
+    body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0.5rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+    }
+    .card{
+        padding: 1rem ;
+        
+    }
+}
+
+
